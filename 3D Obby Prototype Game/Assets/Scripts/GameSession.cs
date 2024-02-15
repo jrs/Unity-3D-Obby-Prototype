@@ -5,7 +5,15 @@ using UnityEngine.SceneManagement;
 
 public class GameSession : MonoBehaviour
 {
-    public void RestartSesion()
+    void Update()
+    {
+        if(Input.GetKeyDown(KeyCode.R))
+        {
+            RestartSession();
+        }
+    }
+
+    public void RestartSession()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }

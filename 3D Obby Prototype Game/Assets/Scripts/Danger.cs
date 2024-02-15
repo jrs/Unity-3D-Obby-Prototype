@@ -21,7 +21,7 @@ public class Danger : MonoBehaviour
     {
         if (other.gameObject.name == "Player")
         {
-            _gameSession.RestartSesion();
+            _gameSession.RestartSession();
         }
     }
 }

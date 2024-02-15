@@ -33,11 +33,16 @@ public class PlayerMovement : MonoBehaviour
             isOnGround = false;
         }
     }
-    private void OnCollisionEnter(Collision collision)
+    private void OnCollisionEnter(Collision other)
     {
-        if (collision.gameObject.CompareTag("Ground"))
+        if (other.gameObject.CompareTag("Ground"))
         {
             isOnGround = true;
+        }
+
+        if(other.gameObject.CompareTag("Platform"))
+        {
+            
         }
     }
 
